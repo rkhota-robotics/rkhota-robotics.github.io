@@ -15,8 +15,61 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f5f5f5;
+        }
+        
+        /* Navigation Bar */
+        nav {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 20px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 10px;
         }
         
         .container {
@@ -29,9 +82,39 @@
             background: white;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin-bottom: 30px;
-            text-align: center;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .placeholder-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4em;
+            font-weight: bold;
+            border: 5px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .header-content {
+            flex: 1;
         }
         
         h1 {
@@ -48,7 +131,6 @@
         
         .contact-info {
             display: flex;
-            justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
             margin-top: 20px;
@@ -67,6 +149,7 @@
             margin-bottom: 20px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            scroll-margin-top: 80px;
         }
         
         h2 {
@@ -166,7 +249,165 @@
             text-align: center;
         }
         
+        /* Openings Section */
+        .openings-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .openings-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+        
+        .opening-card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid white;
+        }
+        
+        .opening-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .opening-card ul {
+            margin-left: 20px;
+        }
+        
+        .apply-button {
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: transform 0.2s;
+        }
+        
+        .apply-button:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Research Gallery */
+        .research-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .gallery-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .gallery-caption {
+            padding: 15px;
+            background: white;
+        }
+        
+        .gallery-caption h4 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .gallery-caption p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        /* Instructions box */
+        .instructions {
+            background: #fff3cd;
+            border: 2px dashed #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .instructions h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .instructions p {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .instructions code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
         @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-menu a {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
             h1 {
                 font-size: 1.8em;
             }
@@ -179,30 +420,117 @@
             .section {
                 padding: 20px;
             }
+            
+            .research-gallery {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>DR. ROSHAN KUMAR HOTA</h1>
-            <p class="title">Assistant Professor | Department of Mechanical Engineering</p>
-            <p class="title">Indian Institute of Technology (IIT) Jodhpur, Rajasthan, India</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>📧</span>
-                    <span>rkhota@iitj.ac.in</span>
-                </div>
-                <div class="contact-item">
-                    <span>📱</span>
-                    <span>(+91) 9775667313</span>
-                </div>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Dr. Roshan Kumar Hota</div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#openings">Openings</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+        <!-- Openings Section -->
+        <div class="openings-section" id="openings">
+            <h2>🎓 Openings for Students</h2>
+            
+            <div class="opening-card">
+                <h3>Ph.D. Positions Available</h3>
+                <p>I am looking for highly motivated Ph.D. students to work on cutting-edge research in robotic grasping and manipulation.</p>
+                <ul>
+                    <li>Strong background in Mechanical Engineering, Robotics, or related fields</li>
+                    <li>Experience with ROS, Python, and MATLAB preferred</li>
+                    <li>Interest in Deep Learning and Reinforcement Learning applications</li>
+                    <li>Funding available through Institute fellowships and research projects</li>
+                </ul>
             </div>
-        </header>
+            
+            <div class="opening-card">
+                <h3>M.Tech. Thesis Students</h3>
+                <p>Multiple positions available for M.Tech. students interested in:</p>
+                <ul>
+                    <li>Design and development of robotic hands and grippers</li>
+                    <li>Grasp planning and manipulation algorithms</li>
+                    <li>Vision-based object recognition for grasping</li>
+                    <li>Integration of AI/ML techniques in robotics</li>
+                </ul>
+            </div>
+            
+            <div class="opening-card">
+                <h3>B.Tech. Projects</h3>
+                <p>Undergraduate students can work on exciting projects including:</p>
+                <ul>
+                    <li>Prosthetic hand design and control</li>
+                    <li>Computer vision for robotic applications</li>
+                    <li>Mechanism design for robotic systems</li>
+                    <li>Simulation and prototyping of robotic grippers</li>
+                </ul>
+            </div>
+            
+            <button class="apply-button" onclick="location.href='mailto:rkhota@iitj.ac.in?subject=Research Position Inquiry'">Contact Me to Apply</button>
+        </div>
 
         <div class="section">
-            <h2>About</h2>
+            <h2>About Me</h2>
             <p>I am presently exploring model-based as well as Deep Learning and Reinforcement Learning based methods to solve problems in robotic grasping and manipulation. My research focuses on the mechatronic design of multi-fingered robotic hands, grasp planning, and developing flexible gripping solutions for handling a variety of objects including deformable objects.</p>
+            <p style="margin-top: 15px;">I have had the privilege of collaborating with leading robotics companies including KUKA Robotics and Atlas Copco, and have published extensively in top-tier journals and conferences.</p>
+        </div>
+
+        <!-- Research Gallery -->
+        <div class="section" id="research">
+            <h2>Research Highlights</h2>
+            <div class="research-gallery">
+                <div class="gallery-item">
+                    <!-- Replace with: <img src="robotic-hand.jpg" alt="Multi-fingered robotic hand"> -->
+                    <div class="gallery-placeholder">Multi-fingered Underactuated Robotic Hand</div>
+                    <div class="gallery-caption">
+                        <h4>Underactuated Hand Design</h4>
+                        <p>Five-fingered anthropomorphic hand actuated by a single motor for adaptive grasping</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <!-- Replace with: <img src="grasp-planning.jpg" alt="Grasp planning visualization"> -->
+                    <div class="gallery-placeholder">Grasp Planning & Quality Metrics</div>
+                    <div class="gallery-caption">
+                        <h4>Vision-based Grasp Planning</h4>
+                        <p>Automated grasp planning using multiple quality metrics and deep learning</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <!-- Replace with: <img src="manipulation.jpg" alt="Object manipulation"> -->
+                    <div class="gallery-placeholder">Manipulation of Deformable Objects</div>
+                    <div class="gallery-caption">
+                        <h4>Flexible Gripping Solutions</h4>
+                        <p>Handling variety of objects including fruits and deformable items</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <!-- Replace with: <img src="lab-setup.jpg" alt="Laboratory setup"> -->
+                    <div class="gallery-placeholder">Robotics Laboratory Setup</div>
+                    <div class="gallery-caption">
+                        <h4>Experimental Research</h4>
+                        <p>State-of-the-art robotic manipulation testbed with vision systems</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
@@ -266,7 +594,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="publications">
             <h2>Selected Publications</h2>
             <div class="publication">
                 <div class="pub-title">Automated Grasp Planning and Finger Design Space Search Using Multiple Grasp Quality Measures</div>
@@ -282,7 +610,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="teaching">
             <h2>Teaching</h2>
             <ul>
                 <li><strong>Robotics</strong> (Undergraduate)</li>
@@ -297,5 +625,28 @@
             <p>Submersible pressure hull adapted for compressive forces in deep sea operations using additive manufacturing (Patent No. 444627)</p>
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navMenu').classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
