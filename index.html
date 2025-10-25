@@ -3,252 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Roshan Kumar Hota - Personal Homepage</title>
+    <title>Dr. Roshan Kumar Hota - Assistant Professor</title>
     <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #1f1f1f;
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
             text-align: center;
         }
+        
         h1 {
-            color: #ffffff;
-            margin: 0;
-        }
-        .contact {
-            font-size: 1.1em;
-            color: #bbbbbb;
-        }
-        nav {
-            background-color: #333333;
-            padding: 10px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav li {
-            margin: 10px;
-        }
-        nav a {
-            color: #bb86fc;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #ffffff;
-            border-bottom: 1px solid #333333;
-            padding-bottom: 10px;
-        }
-        .experience-item {
-            margin-bottom: 20px;
-        }
-        .experience-title {
-            font-weight: bold;
-            color: #ffffff;
-        }
-        .experience-dates {
-            font-style: italic;
-            color: #bbbbbb;
-        }
-        ul.bullet-list {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        ol {
-            margin-left: 20px;
-        }
-        li {
+            color: #667eea;
+            font-size: 2.5em;
             margin-bottom: 10px;
         }
-        a {
-            color: #bb86fc;
+        
+        .title {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
-        a:hover {
-            text-decoration: underline;
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .education-item, .experience-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #764ba2;
+        }
+        
+        .institution {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+        }
+        
+        .degree {
+            color: #555;
+            font-style: italic;
+            margin: 5px 0;
+        }
+        
+        .duration {
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .skills {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .skill-badge {
+            background: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .publication {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .pub-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .pub-details {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Dr. Roshan Kumar Hota</h1>
-        <div class="contact">
-            <p>Department of Mechanical Engineering, IIT Jodhpur, Rajasthan, India</p>
-            <p>(+91) 9775667313 | <a href="mailto:rkhota@iitj.ac.in">rkhota@iitj.ac.in</a></p>
+    <div class="container">
+        <header>
+            <h1>DR. ROSHAN KUMAR HOTA</h1>
+            <p class="title">Assistant Professor | Department of Mechanical Engineering</p>
+            <p class="title">Indian Institute of Technology (IIT) Jodhpur, Rajasthan, India</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>rkhota@iitj.ac.in</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>(+91) 9775667313</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2>About</h2>
+            <p>I am presently exploring model-based as well as Deep Learning and Reinforcement Learning based methods to solve problems in robotic grasping and manipulation. My research focuses on the mechatronic design of multi-fingered robotic hands, grasp planning, and developing flexible gripping solutions for handling a variety of objects including deformable objects.</p>
         </div>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#research-experience">Research Experience</a></li>
-            <li><a href="#patent">Patent</a></li>
-            <li><a href="#journal-publications">Journal Publications</a></li>
-            <li><a href="#conference-proceedings">Conference Proceedings</a></li>
-            <li><a href="#presentations">Conference Presentations</a></li>
-            <li><a href="#research-interests">Research Interests</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#teaching">Teaching/Advising</a></li>
-            <li><a href="#other-activities">Other Activities</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>I am Dr. Roshan Kumar Hota, an Assistant Professor in the Department of Mechanical Engineering at the Indian Institute of Technology Jodhpur. My research focuses on robotic grasping and manipulation, employing model-based approaches alongside Deep Learning and Reinforcement Learning techniques. With a background in mechanical engineering and extensive experience in robotics, I aim to advance the field through innovative designs and applications.</p>
-        </section>
-
-        <section id="education">
+        <div class="section">
             <h2>Education</h2>
-            <div class="experience-item">
-                <p class="experience-title">Ph.D., Department of Mechanical Engineering</p>
-                <p class="experience-dates">Indian Institute of Technology (IIT), Kharagpur, Jan 2014 - Nov 2020</p>
+            <div class="education-item">
+                <div class="institution">Indian Institute of Technology (IIT), Kharagpur</div>
+                <div class="degree">Ph.D. in Mechanical Engineering</div>
+                <div class="duration">January 2014 - November 2020</div>
+                <p style="margin-top: 10px;"><strong>Thesis:</strong> Design Exploration of Underactuated Robotic Hands for Enveloping and Fingertip Grasps</p>
             </div>
-            <div class="experience-item">
-                <p class="experience-title">B.Tech. (Hons.) in Mechanical Engineering and M.Tech. in Manufacturing Science and Engineering (Dual Degree)</p>
-                <p class="experience-dates">Indian Institute of Technology (IIT), Kharagpur, 2007 - 2012</p>
+            <div class="education-item">
+                <div class="institution">Indian Institute of Technology (IIT), Kharagpur</div>
+                <div class="degree">B.Tech. (Hons.) in Mechanical Engineering and M.Tech. in Manufacturing Science and Engineering (Dual Degree)</div>
+                <div class="duration">2007 - 2012</div>
             </div>
-        </section>
+        </div>
 
-        <section id="research-experience">
+        <div class="section">
             <h2>Research Experience</h2>
             <div class="experience-item">
-                <p class="experience-title">Assistant Professor</p>
-                <p class="experience-dates">Indian Institute of Technology Jodhpur, Rajasthan, India, Feb 2025 - Present</p>
-                <p>Exploring model-based as well as Deep Learning and Reinforcement Learning based methods to solve problems in robotic grasping and manipulation.</p>
+                <div class="institution">Indian Institute of Technology Jodhpur, India</div>
+                <div class="degree">Assistant Professor</div>
+                <div class="duration">February 2025 - Present</div>
             </div>
             <div class="experience-item">
-                <p class="experience-title">Assistant Professor</p>
-                <p class="experience-dates">NIT Allahabad, Prayagraj, U.P., India, Feb 2023 - Feb 2025</p>
-                <p>Worked on the mechatronic design of multi-fingered robotic hands for manipulation research.</p>
+                <div class="institution">NIT Allahabad, Prayagraj, India</div>
+                <div class="degree">Assistant Professor</div>
+                <div class="duration">February 2023 - February 2025</div>
+                <p style="margin-top: 5px;">Worked on the mechatronic design of multi-fingered robotic hands for manipulation research.</p>
             </div>
             <div class="experience-item">
-                <p class="experience-title">Postdoctoral Researcher</p>
-                <p class="experience-dates">Vrije Universiteit Brussel, Robotics and Multibody Mechanics Group, Brussels, Belgium, Jan 2021 - Dec 2022</p>
-                <p>Supervisors: Prof. Bram Vanderborght and Prof. Tom Verstraten</p>
-                <p>Developed flexible and robust gripping solutions for intended product variation. The project involved interaction with companies like KUKA Robotics and Atlas Copco. Worked on problems of grasp planning and gripper design for handling a variety of objects including deformable objects like fruits.</p>
+                <div class="institution">Vrije Universiteit Brussel, Belgium</div>
+                <div class="degree">Postdoctoral Researcher - Robotics and Multibody Mechanics Group</div>
+                <div class="duration">January 2021 - December 2022</div>
+                <p style="margin-top: 5px;">Developed flexible and robust gripping solutions for product variation. Collaborated with KUKA Robotics and Atlas Copco on grasp planning and gripper design.</p>
             </div>
-            <div class="experience-item">
-                <p class="experience-title">Research Scholar (Ph.D.)</p>
-                <p class="experience-dates">Indian Institute of Technology Kharagpur, India, Jan 2014 - Nov 2020</p>
-                <p>Supervisor: Prof. C.S. Kumar</p>
-                <p>Thesis title: Design Exploration of Underactuated Robotic Hands for Enveloping and Fingertip Grasps</p>
-                <ul class="bullet-list">
-                    <li>Developed metrics for performance specification of underactuated hands in enveloping and fingertip grasps.</li>
-                    <li>Performed robotic hand design optimization to obtain hand designs with superior grasping performance.</li>
-                    <li>Designed and manufactured a five-fingered anthropomorphic underactuated hand actuated by a single motor.</li>
-                </ul>
-            </div>
-        </section>
+        </div>
 
-        <section id="patent">
-            <h2>Patent</h2>
-            <p>Title: A submersible pressure hull adapted for compressive forces in deep sea operations and its method of manufacture using additive manufacturing process.</p>
-            <p>File No.: 472/KOL/2015</p>
-            <p>Status: Granted</p>
-            <p>Patent No.: 444627</p>
-            <p>Applicant: Indian Institute of Technology Kharagpur</p>
-            <p>Inventors: Cheruvu Siva Kumar, Roshan Kumar Hota, Nilanjan Bera, Sudipto Ghosh</p>
-        </section>
-
-        <section id="journal-publications">
-            <h2>Journal Publications</h2>
-            <ol>
-                <li>Hota, R.K. and Kumar, C.S., 2019. Effect of hand design and object size on the workspace of three-fingered hands. Mechanism and Machine Theory, 133, pp.311-328 (IF 5.90). DOI: <a href="https://doi.org/10.1016/j.mechmachtheory.2018.11.011">https://doi.org/10.1016/j.mechmachtheory.2018.11.011</a>.</li>
-                <li>Hota, R.K. and Kumar, C.S., 2022. Effect of design parameters on strong and immobilizing grasps with an underactuated robotic hand. Robotica <a href="https://doi.org/10.1017/S0263574722000601">https://doi.org/10.1017/S0263574722000601</a> (IF 2.70).</li>
-                <li>Liu, G., De Winter, J., Steckelmacher, D., Hota, R.K., Nowe, A., and Vanderborght, B. Synergistic Task and Motion Planning With Reinforcement Learning-Based Non-Prehensile Actions. IEEE Robotics and Automation Letters, DOI: <a href="https://doi.org/10.1109/LRA.2023.3261708">10.1109/LRA.2023.3261708</a> (IF 5.20).</li>
-                <li>Omidi, M., Van de Perre, G., Kumar Hota, R., Cao, H.L., Saldien, J., Vanderborght, B. and El Makrini, I., 2023. Improving Postural Ergonomics during Human–Robot Collaboration Using Particle Swarm Optimization: A Study in Virtual Environment. Applied Sciences, 13(9), p.5385. (IF 2.84). DOI: <a href="https://doi.org/10.3390/app13095385">10.3390/app13095385</a>.</li>
-                <li>Hota, R.K., Liu, G., Decraemer, B., Swevels, B., Burggraeve, S., Verstraten, T., Vanderborght, B. and Van de Perre, G., 2024. Automated Grasp Planning and Finger Design Space Search Using Multiple Grasp Quality Measures. Robotics, 13(5), p.74. (IF 2.90). DOI: <a href="https://doi.org/10.3390/robotics13050074">10.3390/robotics13050074</a>.</li>
-                <li>Bamoriya, S., Hota, R.K., and Kumar, C.S., 2024. A data density-based measure of dexterity for continuum robots and its comparative study. Robotica, pp.1-20. DOI: <a href="https://doi.org/10.1017/S026357472400184X">10.1017/S026357472400184X</a>.</li>
-            </ol>
-        </section>
-
-        <section id="conference-proceedings">
-            <h2>Conference Proceedings</h2>
-            <ol>
-                <li>Hota, R.K., Korrapati, M. and Kumar, C.S., 2016, December. Kinematic design of a linkage driven robotic hand for prosthetics capable of achieving ten grips. In 2016 International Conference on Robotics and Automation for Humanitarian Applications (RAHA) (pp. 1-6). IEEE.</li>
-                <li>Sahoo, S., Korrapati, M., Hota, R.K. and Kumar, C.S., 2016, December. Bond graph modelling of a tendon driven prosthetic hand finger for motion and impedance control. In 2016 International Conference on Robotics and Automation for Humanitarian Applications (RAHA) (pp. 1-6). IEEE.</li>
-                <li>Sekhar, N.R., Korrapati, M., Hota, R. and Kumar, C.S., 2019. New Dynamic Model and Simulation of the Ballbot Using Reaction Wheels. In Machines, Mechanism and Robotics (pp. 807-816). Springer, Singapore.</li>
-                <li>Babu, V.M., Kiran, G.S., Sameer, S.K., Hota, R.K. and Kumar, C.S., 2016. Stabilization of Posture of Humanoid Using PID Controller in Gazebo Simulator Using Robot Operating System (ROS). In CAD/CAM, Robotics and Factories of the Future (pp. 543-552). Springer, New Delhi.</li>
-                <li>Hota, R.K., Ahirwar, A. and Kumar, C.S., 2016. Design and Control of Tendon Driven Robotic Hand for Prosthesis Applications. In CAD/CAM, Robotics and Factories of the Future (pp. 535-542). Springer, New Delhi.</li>
-                <li>Hota, R.K., Negi, A. and Kumar C.S., 2021. Vision-Based Grasp Planning Based on Grasp Quality Metrics and Its Hardware Implementation. In: Sen D., Mohan S., Ananthasuresh G. (eds) Mechanism and Machine Science. Lecture Notes in Mechanical Engineering. Springer, Singapore.</li>
-                <li>Hota, R.K. and Kumar, C.S., 2022. Derivation of the Rotation Matrix for an Axis-Angle Rotation Based on an Intuitive Interpretation of the Rotation Matrix. In Machines, Mechanism and Robotics (pp. 939-945). Springer, Singapore.</li>
-                <li>Hota, R.K., Kumar, C.S., Van de Perre, G., and Verstraten, T., 2022, December. Hand–Object Interaction Modeling for Precision Grasp by Multi-fingered Hands. In International Conference on Industrial Problems on Machines and Mechanism (pp. 211-218). Singapore: Springer Nature Singapore.</li>
-            </ol>
-        </section>
-
-        <section id="presentations">
-            <h2>Conference Oral/Poster Presentations</h2>
-            <ol>
-                <li>Hota, R.K. and Kumar, C.S., 2018. Hand design selection for precision grasping of small objects based on hand-object system workspace. ASME International Mechanical Engineering Conference and Exposition, Pittsburgh, USA, 2018 (oral presentation).</li>
-                <li>Hota, R.K., Kumar, C.S., 2018. Derivation of the rotation matrix for an axis-angle rotation based on an intuitive interpretation of the rotation matrix. ASME International Mechanical Engineering Conference and Exposition, Pittsburgh, USA, 2018 (oral presentation).</li>
-                <li>Hota, R.K., Negi, A., Kumar, C.S., 2017. Grasp planning using vision based on grasp quality metrics. IFToMM International Conference on Mechanisms and Machines, Mumbai, India, 2017 (poster presentation).</li>
-                <li>Liu, G., De Winter, J., Steckelmacher, D., Hota, R.K., Nowe, A. and Vanderborght, B., 2023. Synergistic Task and Motion Planning With Reinforcement Learning-Based Non-Prehensile Actions. IEEE/ RSJ International Conference on Intelligent Robots and Systems, Detroit, USA (Oral presentation).</li>
-            </ol>
-        </section>
-
-        <section id="research-interests">
+        <div class="section">
             <h2>Research Interests</h2>
-            <p>Design of underactuated robotic hands, grasp synthesis and analysis, grasp quality metrics, grasping and manipulation, industrial automation, kinematics of robots, optimal mechanism design, Deep learning, Reinforcement learning.</p>
-        </section>
+            <div class="research-interests">
+                <span class="tag">Robotic Hand Design</span>
+                <span class="tag">Grasp Synthesis & Analysis</span>
+                <span class="tag">Grasping & Manipulation</span>
+                <span class="tag">Industrial Automation</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Reinforcement Learning</span>
+                <span class="tag">Optimal Mechanism Design</span>
+                <span class="tag">Robot Kinematics</span>
+            </div>
+        </div>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>ROS, Python, MATLAB, Simulink, Solid Works.</p>
-        </section>
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <span class="skill-badge">ROS</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">MATLAB</span>
+                <span class="skill-badge">Simulink</span>
+                <span class="skill-badge">SolidWorks</span>
+            </div>
+        </div>
 
-        <section id="teaching">
-            <h2>Teaching/Advising</h2>
-            <p>Robotics (UG)</p>
-            <p>Engineering Innovation and Design (UG)</p>
-            <p>Optimization Methods in Engineering (UG)</p>
-            <h3>M.Tech. Thesis Guidance</h3>
-            <ol>
-                <li>Design and development of a sensorized multifingered hands for manipulation research.</li>
-                <li>Design and analysis of mechanisms to be used in a break parachute system.</li>
-            </ol>
-            <h3>B.Tech. Thesis Guidance</h3>
-            <ol>
-                <li>Design and development of a prosthetic hand.</li>
-                <li>Object segmentation and pose estimation for grasping applications.</li>
-            </ol>
-        </section>
+        <div class="section">
+            <h2>Selected Publications</h2>
+            <div class="publication">
+                <div class="pub-title">Automated Grasp Planning and Finger Design Space Search Using Multiple Grasp Quality Measures</div>
+                <div class="pub-details">Robotics, 2024 (IF 2.90)</div>
+            </div>
+            <div class="publication">
+                <div class="pub-title">Synergistic Task and Motion Planning With Reinforcement Learning-Based Non-Prehensile Actions</div>
+                <div class="pub-details">IEEE Robotics and Automation Letters, 2023 (IF 5.20)</div>
+            </div>
+            <div class="publication">
+                <div class="pub-title">Effect of hand design and object size on the workspace of three-fingered hands</div>
+                <div class="pub-details">Mechanism and Machine Theory, 2019 (IF 5.90)</div>
+            </div>
+        </div>
 
-        <section id="other-activities">
-            <h2>Other Activities</h2>
-            <p>Coordinator of Self-financed Short Term Course on Advances in Composite Materials: Design Manufacturing and Applications. June 28 - July 02, 2023. Total participants: 56 (faculty and students from institutions across India).</p>
-            <p>Member DUGC</p>
-            <h3>Journal Reviewer</h3>
-            <ul class="bullet-list">
-                <li>Mechanism and Machine Theory (Elsevier).</li>
-                <li>Journal of Intelligent and Robotic Systems (Springer).</li>
-                <li>Robotica (Cambridge University Press).</li>
+        <div class="section">
+            <h2>Teaching</h2>
+            <ul>
+                <li><strong>Robotics</strong> (Undergraduate)</li>
+                <li><strong>Engineering Innovation and Design</strong> (Undergraduate)</li>
+                <li><strong>Optimization Methods in Engineering</strong> (Undergraduate)</li>
             </ul>
-        </section>
-    </main>
+            <p style="margin-top: 15px;"><strong>Thesis Supervision:</strong> M.Tech. and B.Tech. students in areas of robotic hand design, manipulation, and computer vision for grasping.</p>
+        </div>
+
+        <div class="highlight">
+            <h3 style="margin-bottom: 10px;">Patent Granted</h3>
+            <p>Submersible pressure hull adapted for compressive forces in deep sea operations using additive manufacturing (Patent No. 444627)</p>
+        </div>
+    </div>
 </body>
 </html>
